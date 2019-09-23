@@ -1,4 +1,3 @@
 # MealNetworks
-jupyter labextension install @jupyterlab/git
-jupyter serverextension enable --py jupyterlab_git
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/caroschwedh/MealNetworks/master?urlpath=lab/tree/Index.ipynb)
 
