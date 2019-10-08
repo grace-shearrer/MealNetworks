@@ -52,53 +52,6 @@ igraphToSif <- function(inGraph, outfile="output.sif", edgeLabel="label") {
 
 ################################################################
 
-# PREG BMI1 BREAKFAST NETWORK
-mydata <- read.sas7bdat("C:/Users/schwedhelmramc2/Documents/PEAS data_M1/PREG/SAS/preg_bmi1_occ1.sas7bdat")
-
-#skeptic transformation - correlation matrix
-nphuge<-huge.npn(mydata, npn.func = "skeptic", npn.thresh = NULL, verbose = TRUE)
-
-nphugeL = huge(nphuge,lambda=,method = "glasso")
-nphugeL
-plot(nphugeL)
-
-# 10-fold cross validation glasso
-res<-screen_cv.glasso(nphuge, include.mean = FALSE, folds = 10,length.lambda = 20,
-                      lambdamin.ratio = ifelse(ncol(nphuge) > nrow(nphuge), 0.01, 0.001),
-                      trunc.method = "linear.growth", trunc.k = 5,
-                      plot.it = TRUE, se = TRUE, use.package = "glasso",
-                      verbose = TRUE)
-
-# network creation with optimal lambda 
-nphugeL = huge(nphuge,lambda=0.1761061,method = "glasso")
-nphugeL
-plot (nphugeL)
-
-res.lasso.m<-glasso(nphuge,rho=0.1761061)
-AM <- res.lasso.m$wi != 0
-diag(AM) <- F
-g.lasso.m.ug <- as(AM, "graphNEL")
-nodes(g.lasso.m.ug)<-names(mydata)  
-glmat.m<-as(g.lasso.m.ug,"matrix")
-corrmat.m<-(glmat.m*nphuge)
-iglmat.m<-as(glmat.m,"igraph")
-
-# export igraph to sif 
-igraphToSif(iglmat.m, "PREG_BMI1_occ1_optlamb.sif", "and")
-
-# edge weights
-corrm <- melt(corrmat.m)
-corrm1 <- corrm[!(corrm$value ==0),]write.csv(corrm1,file="edgeW_PREG_BMI1_OCC1.csv")
-write.csv(corrm1,file="edgeW_PREG_BMI1_OCC1.csv")
-# cv regularized correlation matrix
-write.csv(corrmat.m,file="corrm_PREG_BMI1_OCC1.csv")
-
-# node weights
-freq_nodes <- read.sas7bdat("C:/Users/schwedhelmramc2/Documents/PEAS data_M1/PREG/preg_bmi1_occ1_freq.sas7bdat")
-write.csv(freq_nodes,file="freq_PREG_BMI1_OCC1.csv")
-
-
-##########################################################
 
 
 # PREG BMI2_3 BREAKFAST NETWORK
