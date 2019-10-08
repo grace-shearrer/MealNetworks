@@ -11,8 +11,8 @@ To group, SAS programs should be run in the following order:
 6. foodgroup_coding_1_5.sas
 7. foodgroup_coding_2_1.sas
 
-For now, the dataset and codes for the generation of a network as an example is provided here:
-## BMI categories 2&3, among pregnant women for breakfast
+### For now, the dataset and codes for the generation of a network as an example is provided here:
+### BMI categories 2&3, among pregnant women for breakfast
 Dataset is preg_bmi2_3_occ1.sas7bdat (obtained by running sas code meal_PEAS_preg.sas)
 Frequencies of consumption of food groups (for node weights) are in preg_bmi2_3_occ1_freq.sas7bdat (obtained by running sas code meal_PEAS_preg.sas)
 
