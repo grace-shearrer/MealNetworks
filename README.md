@@ -16,5 +16,5 @@ Dataset is preg_bmi2_3_occ1.sas7bdat (obtained by running sas code meal_PEAS_pre
 Frequencies of consumption of food groups (for node weights) are in preg_bmi2_3_occ1_freq.sas7bdat (obtained by running sas code meal_PEAS_preg.sas)
 
 ### 10-fold cross validated glasso R code for regularized network (skeptic transformed)
--> R code PREG_BMI_breakfast.R
--> in Python, code is networkX.ipynb (used on the same cross-validated, regularized sparse correlation matrix obtained in R above): corrm_PREG_BMI2_3_OCC1.csv
+- R code PREG_BMI_breakfast.R
+- in Python, code is networkX.ipynb (used on the same cross-validated, regularized sparse correlation matrix obtained in R above): corrm_PREG_BMI2_3_OCC1.csv
