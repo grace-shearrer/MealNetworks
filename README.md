@@ -1,5 +1,7 @@
 # MealNetworks
 
+Aims, hypotheses, methods, and an example network are provided in the document AIMS_METHODS.docx
+
 Step-by-step food grouping.docx contains the detailed procedure of how foods were grouped.
 
 To group, SAS programs should be run in the following order:
