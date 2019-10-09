@@ -23,6 +23,7 @@ library(RBGL)
 library(glasso)
 library(sas7bdat)
 library(nethet)
+library(reshape2)
 
 # code to export igraph to sif file, run once
 igraphToSif <- function(inGraph, outfile="output.sif", edgeLabel="label") {
@@ -71,11 +72,11 @@ res<-screen_cv.glasso(nphuge, include.mean = FALSE, folds = 10,length.lambda = 2
                       verbose = TRUE)
 
 # network creation with optimal lambda 
-nphugeL = huge(nphuge,lambda=0.1607027 ,method = "glasso")
+nphugeL = huge(nphuge,lambda=0.1605642  ,method = "glasso")
 nphugeL
 plot (nphugeL)
 
-res.lasso.m<-glasso(nphuge,rho=0.1607027 )
+res.lasso.m<-glasso(nphuge,rho=0.1605642  )
 AM <- res.lasso.m$wi != 0
 diag(AM) <- F
 g.lasso.m.ug <- as(AM, "graphNEL")
