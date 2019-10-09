@@ -3,7 +3,7 @@
 * Program: 		foodgroup_coding_2_1
 * Author: 		Carolina Schwedhelm
 * Created: 		08/26/2019
-* Last Changes: 09/26/2019, by Carolina Schwedhelm
+* Last Changes: 10/09/2019, by Carolina Schwedhelm
 * Origin: 		self made
 * Category: 	creation of dataset
 * Program before: 	macros_for_foodgroup_coding_1_1
@@ -82,9 +82,15 @@ data infitems_nomix_fgroups; set infitems_nomix;
 	if foodcode in (24000000:24999999) then food_category = 4;				*4: poultry;
 	if foodcode in (26000000:26999999) then food_category = 5;				*5: fish and shellfish;
 
-	if foodcode in (20000000:23999999) then food_category = 6;				*6: meat;
+	if foodcode in (20000000:22299999) then food_category = 6;				*6: meat;
+	if foodcode in (22400000:22499999) then food_category = 6;				
+	if foodcode in (22700000:23999999) then food_category = 6;				
+
 	if foodcode in (25200000:25999999) then food_category = 7;				*7: cured and organ meat;
 	if foodcode in (25100000:25199999) then food_category = 7;				
+	if foodcode in (22300000:22399999) then food_category = 7;				
+	if foodcode in (22500000:22699999) then food_category = 7;				
+
 	if foodcode in (31000000:33999999) then food_category = 8;				*8: eggs;
 	if foodcode in (41000000:49999999) then food_category = 9;				*9: legumes, nuts and seeds;
 	if foodcode in (51000000:51199999) then food_category = 10;				*10: breads from refined grains;
