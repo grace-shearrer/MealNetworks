@@ -15,7 +15,7 @@ To group, SAS programs should be run in the following order:
 
 ### For now, the dataset and codes for the generation of a network as an example is provided here: BMI categories 2&3, among pregnant women for breakfast
 Dataset is preg_bmi2_3_occ1.sas7bdat (obtained by running sas code meal_PEAS_preg.sas)
-Frequencies of consumption of food groups (for node weights) are in preg_bmi2_3_occ1_freq.sas7bdat (obtained by running sas code meal_PEAS_preg.sas)
+Frequencies of consumption of food groups (for node weights) are in BMI2_3_FREQ.csv (obtained by running sas code meal_PEAS_preg.sas)
 
 ### 10-fold cross validated glasso R code for regularized network (skeptic transformed)
 - R code PREG_BMI_breakfast.R
