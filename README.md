@@ -28,4 +28,5 @@ Corrected food groups meat and cured meat. FNDDS codes had ham and bacon as meat
 - preg_bmi2_3_occ1.sas7bdat
 - BMI2_3_FREQ.csv
 - corrm_PREG_BMI2_3_OCC1.csv
+
 But did not re-generate the example network shown in AIMS_METHODS.docx. The connections for meat and cured meat should show some differences once corrected.
