@@ -20,6 +20,7 @@ Frequencies of consumption of food groups (for node weights) are in BMI2_3_FREQ.
 ### 10-fold cross validated glasso R code for regularized network (skeptic transformed)
 - R code PREG_BMI_breakfast.R
 - in Python, code is networkX.ipynb (used on the same cross-validated, regularized sparse correlation matrix obtained in R above): corrm_PREG_BMI2_3_OCC1.csv
+- Tried in R both link communities (package linkcomm) for communities that may overlap (based on Jaccard index) and tried Louvain algorith for community detection. Both are obtained with edge weights (but not nodes). R code: test_communities.R; Result for our example: Test_R_BMI2_3_occ1_weights.pub
 
 ### update on 10/9/2019
 Corrected food groups meat and cured meat. FNDDS codes had ham and bacon as meat. USDAs food patterns and HEI have these as cured meat. This was corrected in:
