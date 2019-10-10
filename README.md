@@ -22,7 +22,7 @@ Frequencies of consumption of food groups (for node weights) are in BMI2_3_FREQ.
 - in Python, code is networkX.ipynb (used on the same cross-validated, regularized sparse correlation matrix obtained in R above): corrm_PREG_BMI2_3_OCC1.csv
 
 ### update on 10/9/2019
-Corrected food groups meat and cured meat. FNDDS codes had ham and bacon as meat and not cured meat, how it is in USDAs food patterns and HEI. This was corrected in:
+Corrected food groups meat and cured meat. FNDDS codes had ham and bacon as meat. USDAs food patterns and HEI have these as cured meat. This was corrected in:
 - Step-by-step food grouping.docx
 - foodgroup_coding_2_1.sas
 - preg_bmi2_3_occ1.sas7bdat
